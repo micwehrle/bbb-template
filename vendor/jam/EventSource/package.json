@@ -1,0 +1,19 @@
+{
+    "name": "EventSource"
+  , "version": "1.0.0"
+  , "description": "Javascript EventSource Polyfill for http://www.w3.org/TR/eventsource/"
+  , "keywords": ["eventsource", "polyfill"]
+  , "homepage": "https://github.com/Yaffle/EventSource"
+  , "author": "Yaffle"
+  , "repository": {
+      "type": "git"
+    , "url": "https://github.com/Yaffle/EventSource.git"
+  }
+  , "licenses": [
+    {
+        "type": "MIT"
+      , "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "main": "eventsource.js"
+}

@@ -1,0 +1,33 @@
+<% console.log(data) %>
+<div class="messages"></div>
+<h1>Account Settings</h1>
+<fieldset>
+  <legend class="centered">Business</legend>
+  <label for="business_name">Name</label>
+  <input type="text" name="name" value="<%- data.model.get('name') %>" required pattern=".{1,128}" title="You must specify the name of your business." placeholder="The name of your business.">
+  <!--
+  <label for="business_domain">Domain</label>
+  <input type="text" name="business_domain" value="<%- data.model.get('business_domain') %>" required pattern=".{1,128}" title="You must input a valid domain." placeholder="The domain of your business." <% if (data.model.get('business_domain')) {%> disabled <%}%> >
+  -->
+</fieldset>
+
+<fieldset>
+  <legend class="centered">Administrator</legend>
+
+  <label for="admin_name">Name</label>
+  <input type="text" name="admin_name" value="<%- data.model.get('admin_name') %>" required pattern=".{1,128}" title="You must specify your name." placeholder="Your name.">
+  <label for="admin_email">Email</label>
+    <input type="text" name="email" value="<%- data.model.get('email') %>" disabled>
+  <label for="admin_role">Role</label>
+  <input type="text" name="admin_role" value="<%- data.model.get('admin_role') %>" required pattern=".{1,128}"  title="You must specify your role or position." placeholder="Your role within the company.">
+
+  <label for="admin_phone">Phone Number</label>
+  <input type="tel" name="phone" value="<%- data.model.get('phone') %>" required pattern=".{7,20}" title="You must provide a 7-20-digit phone number." placeholder="Your primary business phone number.">
+</fieldset>
+
+<div class="row">
+  <div class="twelve columns text-right">
+    <button type="button" class="medium cancel button">Cancel</button>
+    <button type="button" class="medium primary save button" data-analytic="/api/track/account/update/confirm">Save</button>
+  </div>
+</div>
